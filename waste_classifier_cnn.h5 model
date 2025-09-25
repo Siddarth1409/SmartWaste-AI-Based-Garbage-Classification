@@ -1,1 +1,11 @@
+## Download Pre-trained Model
+
+The model file `waste_classifier_cnn.h5` (~300 MB) is not included in this repository due to GitHub size limits.  
+You can download it from Google Drive:
+
+[Download Model](https://drive.google.com/file/d/14DOKQavVhOPDLGhLvN-l6XN_ioF0-ken/view?usp=sharing)
+
+After downloading, place the file in the root of the repository or the `model/` folder.
+
+
 
