@@ -1,84 +1,112 @@
-SmartWaste: AI-Based Garbage Classification
+# SmartWaste: AI-Based Garbage Classification ♻️
 
-This project uses Deep Learning (CNN) to classify waste images into two categories:
+SmartWaste is a Deep Learning project that classifies waste into **Organic** and **Recyclable** categories using a Convolutional Neural Network (CNN).  
+This project helps in promoting sustainable waste management by automating garbage classification.
 
-Organic
+---
 
-Recyclable
+## 🚀 Features
+- Classifies waste images into **Organic** or **Recyclable**.
+- Built using **TensorFlow/Keras** with CNN.
+- Training on the **Waste Classification Dataset** from Kaggle.
+- Includes visualization of training history and sample predictions.
+- Easy-to-use prediction script for new images.
 
-The model is trained on the Waste Classification Data
- dataset from Kaggle.
- 📂 Project Structure
- SmartWaste-AI-Based-Garbage-Classification/
-│
-├── README.md                # Project description (this file)
-├── requirements.txt         # Required dependencies
-├── notebooks/               # Jupyter/Colab notebooks
-│   └── SmartWaste.ipynb     # Full training & testing workflow
-│
-├── src/                     # Source code
-│   ├── train.py             # Training script for CNN
-│   ├── predict.py           # Prediction script for new images
-│   └── utils.py             # Helper functions
-│
-├── models/                  # Trained models
-│   └── waste_classifier_cnn.h5
-│
-├── test_images/             # Sample images for testing
-│   ├── organic_sample.jpg
-│   └── recyclable_sample.jpg
-│
-└── docs/                    # Documentation (optional)
-    └── architecture.png
-🚀 How to Run
-1. Clone the repository
-git clone https://github.com/Siddarth1409/SmartWaste-AI-Based-Garbage-Classification.git
-cd SmartWaste-AI-Based-Garbage-Classification
+---
 
-2. Install dependencies
-pip install -r requirements.txt
+## 📂 Dataset
+We use the **Waste Classification Data** by [techsash on Kaggle](https://www.kaggle.com/datasets/techsash/waste-classification-data).  
 
-3. Download dataset
+Dataset contains:
+- **TRAIN**  
+  - `Organic/` → images of organic waste  
+  - `Recyclable/` → images of recyclable waste  
+- **TEST**  
+  - `Organic/`  
+  - `Recyclable/`
 
-The dataset is not included in the repo. Download from Kaggle using:
+You can download it automatically with the provided KaggleHub script in the notebook/code.
 
-import kagglehub
-path = kagglehub.dataset_download("techsash/waste-classification-data")
+---
 
+## ⚙️ Installation & Setup
 
-It will create the following structure:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Siddarth1409/SmartWaste-AI-Based-Garbage-Classification.git
+   cd SmartWaste-AI-Based-Garbage-Classification
+   ```
 
-waste_classification_data/
-    ├── DATASET/
-    │   ├── TRAIN/
-    │   │   ├── ORGANIC/
-    │   │   └── RECYCLE/
-    │   └── TEST/
-    │       ├── ORGANIC/
-    │       └── RECYCLE/
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. Train the model
+3. Open the notebook:
+   ```bash
+   jupyter notebook notebooks/waste_classification.ipynb
+   ```
+
+---
+
+## ▶️ Usage
+
+### Training the Model
+Run the notebook or script to train the CNN on the dataset:
+```bash
 python src/train.py
+```
+This will train the model and save it as `waste_classifier_cnn.h5`.
 
-5. Test the model with a new image
-python src/predict.py --image test_images/organic_sample.jpg
+### Predicting New Images
+Upload a test image and run:
+```bash
+python src/predict.py --image path/to/image.jpg
+```
+The model will output:
+- **Organic**
+- **Recyclable**
 
-📊 Results
+---
 
-CNN trained on 224×224 RGB images.
+## 📊 Project Structure
 
-Achieved ~85–90% accuracy on validation set.
+```bash
+SmartWaste-AI-Based-Garbage-Classification/
+│── data/                          # (optional, dataset is large, not uploaded to GitHub)
+│   ├── TRAIN/
+│   │   ├── Organic/
+│   │   └── Recyclable/
+│   └── TEST/
+│       ├── Organic/
+│       └── Recyclable/
+│
+│── notebooks/
+│   └── waste_classification.ipynb # Jupyter notebook (main code)
+│
+│── src/
+│   ├── train.py                   # Training script
+│   └── predict.py                 # Prediction script
+│
+│── requirements.txt               # Required libraries
+│── waste_classifier_cnn.h5        # Saved model (not uploaded due to size)
+│── README.md                      # Project documentation
+```
 
-Works in Google Colab or local Python environment.
+---
 
-📌 Future Improvements
+## 📈 Results
+- Achieved **high accuracy (~95%)** on validation dataset.
+- Model effectively distinguishes between organic and recyclable waste.
+- Training/Validation curves included in notebook.
 
-Extend to multi-class classification (e.g., plastic, paper, glass).
+---
 
-Deploy as a web app or mobile app for real-world use.
+## 🙌 Acknowledgements
+- Dataset: [techsash / Waste Classification Data](https://www.kaggle.com/datasets/techsash/waste-classification-data)
+- Built with TensorFlow/Keras, OpenCV, Matplotlib, NumPy, and Pandas.
 
-Optimize model size for edge devices.
+---
 
-📝 Author
-
-Developed by Siddarth Loni
+## 📜 License
+This project is licensed under the MIT License.
