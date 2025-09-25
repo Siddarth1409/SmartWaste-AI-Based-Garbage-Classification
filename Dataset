@@ -1,0 +1,15 @@
+# Waste Classification Dataset
+
+This folder contains a **small sample** of the full dataset used in the project for demonstration purposes.
+
+The full dataset can be downloaded from Kaggle:  
+[Waste Classification Dataset by techsash](https://www.kaggle.com/datasets/techsash/waste-classification-data)
+
+### Structure of the sample dataset:
+
+- `dataset_sample/TRAIN/organic/` : Sample organic waste images for training
+- `dataset_sample/TRAIN/recyclable/` : Sample recyclable waste images for training
+- `dataset_sample/TEST/organic/` : Sample organic waste images for testing
+- `dataset_sample/TEST/recyclable/` : Sample recyclable waste images for testing
+
+> ⚠️ Note: This is only a subset of the original dataset. To run full training, download the complete dataset from the Kaggle link above.
