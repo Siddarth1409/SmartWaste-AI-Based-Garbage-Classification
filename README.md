@@ -107,6 +107,3 @@ SmartWaste-AI-Based-Garbage-Classification/
 - Built with TensorFlow/Keras, OpenCV, Matplotlib, NumPy, and Pandas.
 
 ---
-
-## 📜 License
-This project is licensed under the MIT License.
